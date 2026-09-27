@@ -228,6 +228,27 @@ export const SystemsManager: React.FC = () => {
             placeholder="IP3 Consulting Limited is a policy and development advisory firm..."
           />
         </div>
+
+        {/* Hero Feature Imagery (CMS Controlled) */}
+        <div className="pt-3 border-t border-slate-800/80 space-y-3">
+          <ImageField
+            label="Hero Boardroom Feature Imagery (Right Side Visual)"
+            value={hero.imageUrl || '/images/boardroom_meeting.jpg'}
+            onChange={(url) => handleUpdateHero('imageUrl', url)}
+            folder="hero"
+            placeholder="/images/boardroom_meeting.jpg or https://..."
+          />
+          <div>
+            <label className="block text-xs font-medium text-slate-300 mb-1">Image Alt Text (Accessibility & SEO)</label>
+            <input
+              type="text"
+              value={hero.imageAlt || ''}
+              onChange={(e) => handleUpdateHero('imageAlt', e.target.value)}
+              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:border-[#38d9c0] outline-none"
+              placeholder="IP3 High-Level Advisory & Boardroom Deliberation Session"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Section Typography & Header Configuration */}

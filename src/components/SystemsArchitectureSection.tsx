@@ -7,8 +7,15 @@ import { ConsultationModal } from './ConsultationModal';
 import { PolySolutionsSection } from './PolySolutionsSection';
 import { OrbitalSystemCloneSection } from './OrbitalSystemCloneSection';
 import { SystemNodeId } from '../data/systemsData';
+import { useCMS } from '../context/CMSContext';
+import { defaultSystemsHero } from '../data/defaultContent';
 
 export const SystemsArchitectureSection: React.FC = () => {
+  const { data } = useCMS();
+  const heroConfig = data.systemsHero || defaultSystemsHero;
+  const heroImageUrl = heroConfig.imageUrl || '/images/boardroom_meeting.jpg';
+  const heroImageAlt = heroConfig.imageAlt || 'IP3 High-Level Advisory & Boardroom Deliberation Session';
+
   const [selectedStoryNodeId, setSelectedStoryNodeId] = useState<SystemNodeId | null>(null);
   const [inspectedNodeId, setInspectedNodeId] = useState<SystemNodeId | null>(null);
   const [activeStoryThemeIndex, setActiveStoryThemeIndex] = useState<number>(0);
@@ -171,8 +178,8 @@ export const SystemsArchitectureSection: React.FC = () => {
                   className="relative rounded-none overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900/60 group h-full min-h-[340px] sm:min-h-[440px]"
                 >
                   <img
-                    src="/images/boardroom_meeting.jpg"
-                    alt="IP3 High-Level Advisory & Boardroom Deliberation Session"
+                    src={heroImageUrl}
+                    alt={heroImageAlt}
                     className="w-full h-full object-cover object-center rounded-none transform transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subtle ambient gradient overlay and border matching dark palette */}

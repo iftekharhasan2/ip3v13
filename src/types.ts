@@ -525,6 +525,8 @@ export interface SystemsHeroSectionData {
   description: string;
   exploreBtnText: string;
   consultBtnText: string;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 export interface EightSystemsConfig {

@@ -901,6 +901,8 @@ export const defaultSystemsHero: SystemsHeroSectionData = {
     'IP3 Consulting Limited is a policy and development advisory firm helping multilateral institutions, development partners, governments, businesses and research organizations design better policies, mobilize investment, strengthen institutions and deliver measurable results.',
   exploreBtnText: 'Explore Whole Systems Architecture',
   consultBtnText: 'Request Advisory Briefing',
+  imageUrl: '/images/boardroom_meeting.jpg',
+  imageAlt: 'IP3 High-Level Advisory & Boardroom Deliberation Session',
 };
 
 export const DEFAULT_WEBSITE_DATA: WebsiteData = {
