@@ -77,7 +77,7 @@ export const SystemsArchitectureSection: React.FC = () => {
             {/* Two-column layout: Left (Typography & CTA) & Right (Boardroom Visual) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch w-full">
               {/* Left Column: Eyebrow, Headline, Description, Buttons */}
-              <div className="lg:col-span-7 flex flex-col justify-between items-start text-left space-y-6">
+              <div className="lg:col-span-7 flex flex-col justify-start items-start text-left space-y-6">
                 <div className="space-y-4 w-full">
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -103,19 +103,15 @@ export const SystemsArchitectureSection: React.FC = () => {
                     className="font-serif font-normal text-white tracking-[-0.03em] py-1.5 overflow-visible w-full text-left max-w-full"
                   >
                     <span
-                      style={{ fontSize: '102px', width: '526px' }}
-                      className="block max-w-full text-slate-100 font-normal leading-[0.95] tracking-[-0.04em] mb-1 sm:mb-2"
+                      style={{ fontSize: 'clamp(2.2rem, 3.8vw, 4.5rem)' }}
+                      className="inline text-slate-100 font-normal leading-[1.05] tracking-[-0.04em]"
                     >
-                      From evidence 
+                      From evidence to decisions.{' '}
                     </span>
+               
                     <span
-                      style={{ fontSize: '103px', width: '500px' }}
-                      className="block max-w-full text-[#38d9c0] font-normal italic leading-[1.0] tracking-[-0.03em]"
-                    >
-                     to decisions. 
-                    </span>
-                    <span
-                      className="block text-2xl sm:text-3xl text-[#ff7e67] font-normal italic leading-snug tracking-[-0.02em] mt-3"
+                      style={{ fontSize: '54px' }}
+                      className="block text-[#ff7e67] font-normal italic leading-snug tracking-[-0.02em] mt-3"
                     >
                       From decisions to delivery.
                     </span>
@@ -188,34 +184,6 @@ export const SystemsArchitectureSection: React.FC = () => {
                 </motion.div>
               </div>
             </div>
-
-            {/* Reassurance Bar */}
-            <motion.div
-              id="reassurance-bar"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="mt-6 px-5 sm:px-7 py-2 sm:py-2.5 rounded-full bg-[#f5f5f5] border border-gray-200/90 shadow-sm flex flex-nowrap items-center justify-start gap-2 sm:gap-3 text-xs sm:text-[13px] font-medium tracking-wide whitespace-nowrap max-w-full overflow-x-auto no-scrollbar"
-            >
-              {[
-                'Policy & Economic Advisory',
-                'Project Preparation',
-                'Development Finance',
-                'Institutional Reform',
-                'MEL & Impact',
-                'Digital & Responsible AI',
-              ].map((item, idx, arr) => (
-                <React.Fragment key={item}>
-                  <span className="cursor-default whitespace-nowrap text-[#000000]">
-                    {item}
-                  </span>
-                  {idx < arr.length - 1 && (
-                    <span className="text-slate-400 select-none font-bold">·</span>
-                  )}
-                </React.Fragment>
-              ))}
-            </motion.div>
           </div>
 
           {/* Duplicated Header Block */}
@@ -247,16 +215,16 @@ export const SystemsArchitectureSection: React.FC = () => {
               className="font-serif font-normal text-white tracking-[-0.03em] py-1.5 overflow-visible w-full text-left max-w-full"
             >
               <span
-                style={{ fontSize: '102px', width: '500px' }}
-                className="block max-w-full text-slate-100 font-normal leading-[0.95] tracking-[-0.04em] mb-1 sm:mb-2"
+                style={{ fontSize: 'clamp(2.2rem, 3.8vw, 4.5rem)' }}
+                className="inline text-slate-100 font-normal leading-[1.05] tracking-[-0.04em]"
               >
-                From evidence 
+                From evidence{' '}
               </span>
               <span
-                style={{ fontSize: '103px', width: '500px' }}
-                className="block max-w-full text-[#38d9c0] font-normal italic leading-[1.0] tracking-[-0.03em]"
+                style={{ fontSize: 'clamp(2.2rem, 3.8vw, 4.5rem)' }}
+                className="inline text-slate-100 font-normal italic leading-[1.05] tracking-[-0.03em]"
               >
-               to decisions. 
+                to decisions.
               </span>
             </motion.h2>
 
